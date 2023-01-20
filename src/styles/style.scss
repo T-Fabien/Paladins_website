@@ -1,0 +1,29 @@
+/* Utils */
+@import "./utils/variables";
+
+/* Base */
+@import "./base/reset_css";
+@import "./base/typography";
+
+/* Layout */
+@import "./layout/navbar";
+
+/* Pages */
+@import "./pages/homepage";
+@import "./pages/championpage";
+@import "./pages/tracker";
+
+/* Components */
+@import "./components/UnderConstruction";
+@import "./components/ChampionCard";
+@import "./components/ChampionSkills";
+@import "./components/ChampionSkillsItem";
+@import "./components/ChampionSkillsItemDesc";
+@import "./components/HeroBanner";
+@import "./components/ChampionLegendaryCards";
+@import "./components/ChampionCommonCards";
+
+html{
+    background-color: $dark;
+    color: white;
+  }

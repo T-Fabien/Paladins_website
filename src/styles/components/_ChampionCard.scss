@@ -1,0 +1,51 @@
+.champion__grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 40px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 2% 5%;
+    &__card{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 212px;
+        transition-duration: 300ms;
+        &__championimage{
+            width: 100%;
+        }
+        & a{
+            text-decoration: none;
+        }
+        & div{
+            align-items: center;
+            background-color: rgba($darkblue, 0.8);
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            top: -48px;
+            & p{
+                color: white;
+                font-size: 24px;
+                position: relative;
+                text-decoration: none;
+                width: 100%;
+                left: -20px;
+                text-align: center;
+            }
+        }
+        &__classicon{
+            width: 48px;
+            margin-left: 5px;
+        }
+    }
+    &__card:hover{
+        transform: scale(1.2);
+        transition-duration: 300ms;
+    }
+}
+
+.card__nofiltered{
+    opacity: 0.5;
+}
+
+

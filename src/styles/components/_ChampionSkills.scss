@@ -1,0 +1,74 @@
+.champion__page {
+  &__skills {
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 25px 0;
+    &__button {
+      background-color: transparent;
+      border: none;
+      margin: 10px 30px;
+    }
+  }
+  &__spells__container {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 40px 0 0 20%;
+  }
+  &__cards__legendary {
+    color: white;
+    display: flex;
+    margin: 40px auto 50px auto;
+    width: 90%;
+    & div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    & img {
+      width: 192px;
+    }
+    & h3 {
+      font-size: 1.5rem;
+      margin: 10px 0 20px 0;
+    }
+    & p {
+      text-align: center;
+      width: 80%;
+    }
+  }
+  &__cards__common {
+    color: white;
+    display: grid;
+    gap: 60px 20px;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 75px;
+    width: 90%;
+    margin-left: 5%;
+    & div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+    & img {
+      width: 192px;
+      border-radius: 5px;
+    }
+    & h4 {
+      font-size: 1.15rem;
+      margin: 15px 0 10px 0;
+    }
+    & p {
+      font-size: 0.9rem;
+      text-align: center;
+      width: 80%;
+    }
+  }
+}
