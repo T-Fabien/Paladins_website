@@ -15,8 +15,6 @@ import ChampionSkills from "../components/ChampionSkills";
 import ChampionLegendaryCards from "../components/ChampionLegendaryCards";
 import ChampionCommonCards from "../components/ChampionCommonCards";
 
-import Test from "../components/test";
-
 function ChampionPage() {
   // Constants
   const championCards = champions_cards_info;
@@ -24,10 +22,10 @@ function ChampionPage() {
 
   const champion: any = allChampions.paladins_champion.filter(
     (champions: any) => {
-      return champions.Name === window.location.href.substring(41).split("%20").join(" ");
+      return champions.Name === window.location.href.split("/paladins/champions/")[1].split("%20").join(" ");
     }
   );
-
+  
   // Variables
   var icon;
   var role: string = "";

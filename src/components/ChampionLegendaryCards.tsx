@@ -5,12 +5,11 @@ type Props = {
 };
 
 function ChampionLegendaryCards({ champion_leg_card }: Props) {
-  console.log(champion_leg_card);
+
 
   var categorie = "";
   var description = "";
-
-
+  
   return (
     <div className={"champion__page__cards__legendary"}>
       {champion_leg_card.map((championcard: any) => {
