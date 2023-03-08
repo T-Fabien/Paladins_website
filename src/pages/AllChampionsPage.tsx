@@ -1,18 +1,22 @@
-import {useState } from "react";
+import { useState } from "react";
 
 import AllChampionsGrid from "../components/AllChampionsGrid";
 
 // File
 import { all_champion_list } from "../data/all_champions";
 
-function AllChampionsPage() {
+// Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
+function AllChampionsPage() {
   // Constants
-  const allChampions = all_champion_list; // Local data 
+  const allChampions = all_champion_list; // Local data
   // State
   const [Filter, SetFilter] = useState("name");
-  const [FilterData, SetFilterData] = useState<any>(allChampions.paladins_champion); // Filters the champions according to the user's choice
-
+  const [FilterData, SetFilterData] = useState<any>(
+    allChampions.paladins_champion
+  ); // Filters the champions according to the user's choice
 
   // Champion Filter
   const updateFilter = (role: string) => {
@@ -24,7 +28,7 @@ function AllChampionsPage() {
     } else {
       if (Filter !== role) {
         SetFilter(role);
-        filter_champions =  allChampions.paladins_champion
+        filter_champions = allChampions.paladins_champion
           .filter((champion: any) => {
             return champion.Roles.includes(role);
           })
@@ -36,20 +40,31 @@ function AllChampionsPage() {
     SetFilterData(filter_champions);
   };
 
-    return (
+  return (
+    <div>
       <div>
+      <div className="search-container">
+  <input
+    type="text"
+    className="search-input"
+    placeholder="Rechercher..."
+  />
+    <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon"/>
+</div>
         <button onClick={() => updateFilter("")}>All</button>
         <button onClick={() => updateFilter("Dégâts")}>Damage</button>
         <button onClick={() => updateFilter("Flanc")}>Flank</button>
         <button onClick={() => updateFilter("Tank")}>Tank</button>
         <button onClick={() => updateFilter("Soutien")}>Healer</button>
-        <AllChampionsGrid
-          data={FilterData}
-          champions={ allChampions.paladins_champion}
-          filter={Filter}
-        />
       </div>
-    );
+
+      <AllChampionsGrid
+        data={FilterData}
+        champions={allChampions.paladins_champion}
+        filter={Filter}
+      />
+    </div>
+  );
 }
 
 export default AllChampionsPage;

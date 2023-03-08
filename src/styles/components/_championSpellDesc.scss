@@ -1,0 +1,46 @@
+.presentation__spells__desc{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: center;
+    padding: 0 15px;
+    margin: 15px 15px 15px 0;
+    & img{
+        width: 192px;
+        border-radius: 5px;
+    }
+    & .presentation__spells__description{
+        margin-left: 20px ;
+        & .spells__title{
+            font-size: 28px;
+            margin: 15px 0;
+            color: $white;
+        }
+        & .spells__dmgtype{
+            font-size: 22px;
+            margin: 10px 0 20px 0;
+            color: $blue;
+        }
+        & .spells__description{
+            font-size: 16px;
+            margin: 10px 0;
+            color: $white;
+        }
+    }
+}
+.presentation__spells__stats {
+    display: flex;
+    flex-direction: row;
+    color: $white;
+    margin: 30px 15px 15px 0;
+    & svg {
+        margin-right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    & p {
+        font-size: 22px;
+        position: relative;
+        top: 7px;
+    }
+}
